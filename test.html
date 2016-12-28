@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Test for lazy load images</title>
+	<style>	
+		img {
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/1.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/2.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/3.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/4.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/5.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/6.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/7.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/8.jpg">
+	<img src="./res/loading.gif" alt="images for test" data-src="./res/9.jpg">
+
+	<script src="./jquery.js"></script>
+	<script src="./jquery.lazyLoader.js"></script>
+	<script>	
+		$('img').lazyLoader({
+			threshold: 200
+		});
+	</script>
+</body>
+</html>
