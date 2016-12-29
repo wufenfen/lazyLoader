@@ -5,8 +5,22 @@
 	<title> Test for lazy load images</title>
 	<style>	
 		img {
-			height: 400px;
+			height: 800px; 
+			width: 600px; 
+			opacity: 0;
 		}
+
+		body{
+			max-width: 600px;
+			margin: 0 auto;
+		}
+
+		.trans {
+			transform: rotate(360deg);
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
+		}
+
 	</style>
 </head>
 <body>
@@ -24,7 +38,8 @@
 	<script src="./jquery.lazyLoader.js"></script>
 	<script>	
 		$('img').lazyLoader({
-			threshold: 200
+			threshold: 200, //图片进入多少开始加载
+			style: "trans" //进入的效果
 		});
 	</script>
 </body>
